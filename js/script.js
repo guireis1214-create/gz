@@ -5,8 +5,42 @@ window.addEventListener("load", () => {
     console.log("Portfólio carregado!");
 });
 
-// Espera o DOM carregar (evita erros de elementos não encontrados)
+// ==========================
+// DOM READY
+// ==========================
 document.addEventListener("DOMContentLoaded", () => {
+
+    // ==========================
+    // PROJETOS (RENDER DINÂMICO)
+    // ==========================
+    const projetos = [
+        {
+            titulo: "Sistema de Cadastro",
+            descricao: "Projeto em desenvolvimento."
+        },
+        {
+            titulo: "Loja Virtual",
+            descricao: "Projeto em desenvolvimento."
+        }
+    ];
+
+    const containerProjetos = document.querySelector("#projetos");
+
+    if (containerProjetos) {
+
+        projetos.forEach(projeto => {
+
+            const card = `
+                <article class="card-projeto">
+                    <h3>${projeto.titulo}</h3>
+                    <p>${projeto.descricao}</p>
+                </article>
+            `;
+
+            containerProjetos.innerHTML += card;
+        });
+
+    }
 
     // ==========================
     // MENU ATIVO
@@ -61,13 +95,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (botaoTema) {
         botaoTema.addEventListener("click", () => {
-
             document.body.classList.toggle("dark");
 
             botaoTema.innerHTML =
                 document.body.classList.contains("dark")
                     ? "☀️ Tema Claro"
                     : "🌙 Tema Escuro";
+        });
+    }
+
+    // ==========================
+    // FORMULÁRIO CONTATO
+    // ==========================
+    const form = document.getElementById("formContato");
+
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            alert("Mensagem enviada com sucesso!");
+
+            form.reset();
         });
     }
 
@@ -81,6 +129,14 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Abrindo Instagram...");
         });
     }
+  const header = document.querySelector("header");
 
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+        header.classList.add("rolando");
+    } else {
+        header.classList.remove("rolando");
+    }
+});
 
 });
