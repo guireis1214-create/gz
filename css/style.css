@@ -29,12 +29,31 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 header h1 {
     font-size: 2rem;
+    transition: all 0.3s ease;
 }
 
+/* Menu menor ao rolar a página */
+header.rolando {
+    padding: 8px 10%;
+}
+
+header.rolando h1 {
+    font-size: 1.3rem;
+}
+
+header.rolando nav a {
+    font-size: 0.9rem;
+}
+
+header.rolando #temaBtn {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+}
 nav ul {
     display: flex;
     gap: 25px;
@@ -248,6 +267,11 @@ body.dark section {
     background: #1e1e1e;
 }
 
+
+body.dark section h2 {
+    color: #f5f5f5;
+}
+
 body.dark header,
 body.dark footer {
     background: #1a1a1a;
@@ -279,4 +303,14 @@ body.dark nav a {
     #sobre p {
         text-align: center;
     }
+    .card-projeto {
+    background: #222;
+    color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+section {
+    scroll-margin-top: 80px;
+}
 }
