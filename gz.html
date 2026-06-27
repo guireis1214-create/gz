@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1 class="digitando">Guilherme Dos Reis Ferreira</h1>
+
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+
+        <!-- Botão de tema fora do ul (melhor semântica) -->
+        <button id="temaBtn">🌙 Tema Escuro</button>
+    </nav>
+</header>
+
+<main>
+
+<section id="sobre">
+    <h2>Sobre Mim</h2>
+
+    <img src="assets/foto-perfil.jpg" alt="Foto de perfil">
+
+    <p>
+        Sou guilherme, estudante de desenvolvimento web e estou aprendendo HTML, CSS e JavaScript.
+        Meu objetivo é criar aplicações modernas e responsivas.
+    </p>
+</section>
+
+<section id="habilidades">
+    <h2>Habilidades</h2>
+
+    <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+    </ul>
+</section>
+
+<section id="projetos">
+    <h2>Projetos</h2>
+
+    <article>
+        <h3>Sistema de Cadastro</h3>
+        <p>Projeto em desenvolvimento.</p>
+    </article>
+
+    <article>
+        <h3>Loja Virtual</h3>
+        <p>Projeto em desenvolvimento.</p>
+    </article>
+</section>
+
+<section id="contato">
+    <h2>Contato</h2>
+
+    <form id="formContato">
+
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" required placeholder="Seu nome">
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" required placeholder="seuemail@email.com">
+
+        <label for="assunto">Assunto</label>
+        <select id="assunto">
+            <option>Dúvida</option>
+            <option>Orçamento</option>
+            <option>Trabalho</option>
+        </select>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem..."></textarea>
+
+        <button type="submit">Enviar</button>
+
+        <p id="msgSucesso"></p>
+
+    </form>
+</section>
+
+</main>
+
+<footer>
+    <p>Desenvolvido por Guilherme</p>
+
+    <a href="https://www.instagram.com/guizinttw/"
+       target="_blank"
+       rel="noopener noreferrer">
+       Instagram
+    </a>
+</footer>
+</main>
+
+<footer>
+    ...
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
+
